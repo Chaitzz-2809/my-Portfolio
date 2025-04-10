@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.4);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #0e1217;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #4acfee;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      color: #4acfee;
+      margin-bottom: 20px;
+    }
+
+    .modal-content a {
+      color: #4acfee;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .modal-content a:hover {
+      text-decoration: underline;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/galaxy.mp4" type="video/mp4">
+  </video>
+  <section class="main-section">
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Chaitzz</span>_2809</h1>
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#">Home </a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">About</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Projects</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Skills</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Content</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-info">
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Chaitanya Goswami</h1>
+        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">I'm a Software Developer</h2>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
+          I'm a creative developer blending code and design to build engaging digital experiences. Let's create something awesome together!
+        </p>
+        <div class="Buttons">
+          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Hire me</button>
+          <ul class="ul-icons">
+            <li><a href="#" id="githubBtn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
+            <li><a href="#" id="linkedinBtn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bxl-linkedin'></i></a></li>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400" id="instaBtn"><i class='bx bxl-instagram'></i></a></li>
+            <li><a href="#" id="fbBtn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-facebook-circle'></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+        <img src="images/man1.png" alt="person-img">
+      </div>
+    </div>
+
+    <div class="info-sec">
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
+        <h1>4+</h1>
+        <p>Years of <br> Experience</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
+        <h1>7+</h1>
+        <p>Technical <br> Skills</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
+        <h1>50+</h1>
+        <p>Projects <br> Completed</p>
+      </div>
+      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
+        <h1>80+</h1>
+        <p>Satisfied <br> Clients</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Section -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Let's Connect</h2>
+      <p>📞 Phone: <a href="tel:9958382273">9958382273</a></p>
+      <p>📧 Email: <a href="mailto:chaitanyadeepti2000@gmail.com">chaitanyadeepti2000@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Instagram Modal -->
+<div id="instaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Follow me on Instagram</h2>
+      <p>📸 Instagram: <a href="https://www.instagram.com/Chaitzz_2809">@Chaitzz_2809</a></p>
+    </div>
+  </div>
+
+  <!-- LinkedIn Modal -->
+  <div id="linkedinModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Check me out on LinkedIn</h2>
+      <p>📸 LinkedIn: <a href="https://www.linkedin.com/in/chaitanya-goswami-1431ab2ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@Chaitanya Goswami</a></p>
+    </div>
+  </div>
+  
+  <!-- Facebook Modal -->
+  <div id="fbModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Hear me on Facebook</h2>
+      <p>📸 Facebook: <a href="https://www.facebook.com/share/14qJtErnjX/">@Chaitanya Goswami</a></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const modal = document.getElementById("contactModal");
+    const btn = document.querySelector(".btn");
+    const span = document.querySelector(".close");
+
+    btn.onclick = function () {
+      modal.style.display = "flex";
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    const instaModal = document.getElementById("instaModal");
+  const instaBtn = document.getElementById("instaBtn");
+  const instaClose = instaModal.querySelector(".close");
+
+  instaBtn.onclick = function () {
+    instaModal.style.display = "flex";
+  }
+
+  instaClose.onclick = function () {
+    instaModal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === instaModal) {
+      instaModal.style.display = "none";
+    }
+  }
+  
+  const linkedinModal = document.getElementById("linkedinModal");
+  const linkedinBtn = document.getElementById("linkedinBtn");
+  const linkedinClose = linkedinModal.querySelector(".close");
+
+  linkedinBtn.onclick = function () {
+    linkedinModal.style.display = "flex";
+  }
+
+  linkedinClose.onclick = function () {
+    linkedinModal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === linkedinModal) {
+        linkedinModal.style.display = "none";
+    }
+  }
+
+  const fbModal = document.getElementById("fbModal");
+  const fbBtn = document.getElementById("fbBtn");
+  const fbClose = fbModal.querySelector(".close");
+
+  fbBtn.onclick = function () {
+    fbModal.style.display = "flex";
+  }
+
+  fbClose.onclick = function () {
+    fbModal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target === fbModal) {
+        fbModal.style.display = "none";
+    }
+  }
+  </script>
+</body>
+</html>
